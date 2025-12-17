@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>schriftzug.randomizer</title>
+    <link rel="icon" type="image" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+        <!-- Google Fonts for better weight/preview support -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&family=Open+Sans:wght@300;400;700&family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;700&family=Raleway:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Source+Serif+Pro:wght@400;600;700&family=Pacifico&family=Great+Vibes&family=Bebas+Neue&family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Anfang der Website -->
+   
+   <div class="top-row">
+        <div class="top-row-left">
+    <h1 class="header" id="h1">Schriftzug.Randomizer</h1> 
+        </div>
+        <div class="top-row-right">
+    <h5 class="header" id="h5"> Made by Jonathan Behre</h5>
+        </div>
+   </div>
+    <div class="disclaimer">Disclaimer: Your PNGs and SVGs may differ from the preview shown on this website. This is due to limitations in web technologies and differences in how browsers render text versus how SVG/PNG exports are generated. But this whole website is a randomizer anyway, so it shouldn't bother you.</div>
+<br>
+<div class="font-row" style="border-bottom: black 2px solid;">
+    <label for="dropdown">Pick a font:</label>
+        <select name="Font" id="Font">
+            <!-- System Fonts -->
+            <option value="Arial, Helvetica, sans-serif" style="font-family: Arial, Helvetica, sans-serif;">Arial</option>
+            <option value="'Helvetica Neue', Helvetica, Arial, sans-serif" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Helvetica Neue</option>
+            <option value="'Times New Roman', Times, serif" style="font-family: 'Times New Roman', Times, serif;">Times New Roman</option>
+            <option value="Georgia, 'Times New Roman', Times, serif" style="font-family: Georgia, 'Times New Roman', Times, serif;">Georgia</option>
+            <option value="Verdana, Geneva, sans-serif" style="font-family: Verdana, Geneva, sans-serif;">Verdana</option>
+            <option value="Tahoma, Geneva, sans-serif" style="font-family: Tahoma, Geneva, sans-serif;">Tahoma</option>
+            <option value="'Trebuchet MS', Helvetica, sans-serif" style="font-family: 'Trebuchet MS', Helvetica, sans-serif;">Trebuchet MS</option>
+            <option value="'Courier New', Courier, monospace" style="font-family: 'Courier New', Courier, monospace;">Courier New</option>
+            <option value="'Lucida Console', Monaco, monospace" style="font-family: 'Lucida Console', Monaco, monospace;">Lucida Console</option>
+            <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;">Palatino</option>
+            <option value="Garamond, 'Times New Roman', serif" style="font-family: Garamond, 'Times New Roman', serif;">Garamond</option>
+            <option value="Impact, Charcoal, sans-serif" style="font-family: Impact, Charcoal, sans-serif;">Impact</option>
+            <option value="'Comic Sans MS', 'Comic Sans', cursive" style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;">Comic Sans MS</option>
+            <option value="'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" style="font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">Segoe UI</option>
+            <option value="monospace" style="font-family: monospace;">Monospace (System)</option>
+            <option value="serif" style="font-family: serif;">Serif (System)</option>
+            <option value="sans-serif" style="font-family: sans-serif;">Sans-serif (System)</option>
+            
+            <!-- Google Fonts - Modern Sans -->
+            <option value="'Roboto', sans-serif" style="font-family: 'Roboto', sans-serif;">Roboto</option>
+            <option value="'Open Sans', sans-serif" style="font-family: 'Open Sans', sans-serif;">Open Sans</option>
+            <option value="'Montserrat', sans-serif" style="font-family: 'Montserrat', sans-serif;">Montserrat</option>
+            <option value="'Lato', sans-serif" style="font-family: 'Lato', sans-serif;">Lato</option>
+            <option value="'Poppins', sans-serif" style="font-family: 'Poppins', sans-serif;">Poppins</option>
+            <option value="'Inter', sans-serif" style="font-family: 'Inter', sans-serif;">Inter</option>
+            <option value="'Raleway', sans-serif" style="font-family: 'Raleway', sans-serif;">Raleway</option>
+            <option value="'Fredoka', sans-serif" style="font-family: 'Fredoka', sans-serif;">Fredoka</option>
+            <option value="'Quicksand', sans-serif" style="font-family: 'Quicksand', sans-serif;">Quicksand</option>
+            <option value="'Source Sans Pro', sans-serif" style="font-family: 'Source Sans Pro', sans-serif;">Source Sans Pro</option>
+            
+            <!-- Google Fonts - Serif -->
+            <option value="'Merriweather', serif" style="font-family: 'Merriweather', serif;">Merriweather</option>
+            <option value="'Source Serif Pro', serif" style="font-family: 'Source Serif Pro', serif;">Source Serif Pro</option>
+            <option value="'Playfair Display', serif" style="font-family: 'Playfair Display', serif;">Playfair Display</option>
+            
+            <!-- Google Fonts - Display / Fun -->
+            <option value="'Pacifico', cursive" style="font-family: 'Pacifico', cursive;">Pacifico</option>
+            <option value="'Great Vibes', cursive" style="font-family: 'Great Vibes', cursive;">Great Vibes</option>
+            <option value="'Bebas Neue', sans-serif" style="font-family: 'Bebas Neue', sans-serif;">Bebas Neue</option>
+                </select>
+        </div>
+    <!-- Typebox -->
+<div class="custom_input">
+    <input id="typehere" type="text" placeholder="Type here..."></input>
+</div>
+    <!--Randomizer + Export on same row under textfield -->
+    <div class="controls-row">
+        <div class="enable-wrapper">
+            <label for="enable-options">Enable options:</label>
+            <input type="checkbox" id="enable-options" name="enable-options">
+        </div>
+
+        <div class="button-group">
+            <button id="randomizer">Randomize!</button>
+            <button id="export-png">Export PNG</button>
+            <button id="export-svg">Export SVG</button>
+        </div>
+
+        <div class="scale-wrapper">
+            <label for="export-scale" style="color:white; margin-left:8px;">Scale:</label>
+            <select id="export-scale" name="export-scale">
+                <option value="1">1x</option>
+                <option value="2">2x</option>
+                <option value="4">4x</option>
+            </select>
+        </div>
+    </div>
+<div class="page-grid">
+  <div class="left-block">
+    <!-- Dropdown für Farbe (wird vom JS erwartet) -->
+    <label for="dropdown">Pick a color:</label>
+    <select name="Color" id="dropdown">
+        <option value="#000000">Black</option>
+        <option value="#FFFFFF">White</option>
+        <option value="#FF0000">Red</option>
+        <option value="#00FF00">Lime Green</option>
+        <option value="#0000FF">Blue</option>
+        <option value="#FFFF00">Yellow</option>
+        <option value="#FFA500">Orange</option>
+        <option value="#800080">Purple</option>
+        <option value="#00FFFF">Cyan</option>
+        <option value="#FF00FF">Magenta</option>
+        <option value="#C0C0C0">Light Gray</option>
+    </select>
+    <br>
+    <br>
+    <!-- Slider für Gewicht der Schrift -->
+        <div>
+            <label for ="weight">Weight:</label>
+            <input type="range" id="weight" name="weight" min="10" max="900" value="400">
+        </div>
+    <br>
+    <br>
+<!--Slider für Höhe vom Text-->
+        <div>
+            <label for ="height">Height:</label>
+            <input type="range" id="height" name="height" min="80" max="150" value="100">
+        </div>
+    <br>
+    <br>
+<!--Weite vom Text-->
+        <div>
+            <label for ="width">Width:</label>
+            <input type="range" id="width" name="width" min="80" max="150" value="100">
+        </div>
+<!-- Checkbox für Border -->
+    <br>
+    <br>
+        <div>
+            <label for ="checkbox">Textborder:</label>
+                <input type="checkbox" id="checkbox" name="checkbox">
+            </label>
+        </div>
+    <br>
+    <br>
+<!-- Dropdown für Bordercolor -->
+        <div>
+            <label for="bordercolor">Bordercolor:</label>
+            <select name="Bordercolor" id="bordercolor">
+                <option value="#000000">Black</option>
+                <option value="#FFFFFF">White</option>
+                <option value="#FF0000">Red</option>
+                <option value="#00FF00">Lime Green</option>
+                <option value="#0000FF">Blue</option>
+                <option value="#FFFF00">Yellow</option>
+                <option value="#FFA500">Orange</option>
+                <option value="#800080">Purple</option>
+                <option value="#00FFFF">Cyan</option>
+                <option value="#FF00FF">Magenta</option>
+                <option value="#FFC0CB">Pink</option>
+                <option value="#008000">Dark Green</option>
+                <option value="#808080">Gray</option>
+                <option value="#C0C0C0">Light Gray</option>
+                <option value="#800000">Maroon</option>
+                <option value="#000080">Navy Blue</option>
+                <option value="#008080">Teal</option>
+                <option value="#A52A2A">Brown</option>
+                <option value="#FF7F50">Coral</option>
+                <option value="#FFD700">Gold</option>
+                <option value="#4B0082">Indigo</option>
+                <option value="#EE82EE">Violet</option>
+                <option value="#87CEEB">Sky Blue</option>
+            </select>
+        </div>
+    <br>
+    <br>
+<!-- Slider für Borderradius */ -->
+        <div>
+            <label for ="borderradius">Border Radius:</label>
+            <input type="range" id="borderradius" name="borderradius" min="0" max="100" value="0">
+        </div>
+    <br>
+    <br>
+  </div>
+
+    <div class="right-block">
+<!-- Slider für Buchstabenabstand-->
+        <div>
+            <label for="letterspace">Letterspace:</label>
+            <input type="range" id="letterspace" name="letterspace" min="-100" max="350" value="0">
+        </div>
+    <br>
+    <br>
+<!--Stärke des Kursivgrads idk :DDD XDDDD :3333-->
+        <div>
+            <label for="italicstrength">Italicstrength:</label>
+            <input type="range" id="italicstrength" name="italicstrength" min="-60" max="60" value="0">
+        </div>
+    <br>
+    <br>
+<!--Neon Glow Color-->
+        <div>
+            <label for="neonglow-color">Neonglow Color:</label>
+            <select id="neonglow-color" name="neonglow-color">
+                <option value="#000000">Black</option>
+                <option value="#FFFFFF">White</option>
+                <option value="#FF0000">Red</option>
+                <option value="#00FF00">Lime Green</option>
+                <option value="#0000FF">Blue</option>
+                <option value="#FFFF00">Yellow</option>
+                <option value="#FFA500">Orange</option>
+                <option value="#800080">Purple</option>
+                <option value="#00FFFF">Cyan</option>
+                <option value="#FF00FF">Magenta</option>
+                <option value="#FFC0CB">Pink</option>
+                <option value="#FFD700">Gold</option>
+                <option value="#EE82EE">Violet</option>
+                <option value="#87CEEB">Sky Blue</option>
+                <option value="#39FF14">Neon Green</option>
+                <option value="#FF073A">Neon Pink</option>
+                <option value="#7FFF00">Chartreuse</option>
+            </select>
+        </div>
+    <br>
+    <br>
+<!--Neon Glow-->
+        <div>
+            <label for="neonglow">Neonglow:</label>
+            <input type="range" id="neonglow" name="neonglow" min="0" max="3000" value="0">
+        </div>
+    <br>
+    <br>
+<!--Split Fracture Effekt-->
+        <div>
+            <label for="split">Split:</label>
+            <input type="range" id="split" name="split" min="0" max="3000" value="0">
+        </div>
+
+    </div>
+
+
+
+</div>
+        <!-- hidden preview element used for creating SVG/PNG exports -->
+        <div id="preview" aria-hidden="true" style="position:absolute; left:-9999px; top:0; visibility:hidden;"></div>
+
+        <script src="index.js"></script>
+
+        <br>
+        <footer class="footer"><a href="https://instagram.com/jxthn.hmb" target="blank" rel="noopener noreferrer">Check out my Instagram!</a></footer>
+
+  </body>
+</html>

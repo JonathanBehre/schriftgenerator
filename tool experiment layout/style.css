@@ -1,0 +1,232 @@
+html, body {
+    margin: 0;           
+  padding: 0;          
+  width: 100vw;        
+  height: 100vh;      
+  overflow-x: hidden;
+}
+
+body {
+    background: rgb(170, 170, 170);
+    height: 100vh;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 2%;
+    border-bottom: 2px solid black;
+    background: rgb(170, 170, 170);
+    background-color: rgb(170, 170, 170)
+}
+
+.top-row .header { color: white; }
+
+.disclaimer {
+    background: rgb(105, 105, 105);
+    color: white;
+    padding: 10px 2%;
+    border-bottom: 2px solid black;
+    font-size: 13px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.controls-row > .button-group { justify-self: center; display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+.controls-row > .scale-wrapper { justify-self: end; display:flex; align-items:center; gap:12px; }
+
+.footer{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding-left: 2%;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    font-size: large;
+}
+
+
+.header{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#typehere{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    background-color: transparent;
+    padding: 100px;
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    word-wrap: break-word;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+/* Hidden preview used for export: keep same typographic defaults */
+#preview{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    background-color: transparent;
+    padding: 60px;
+    width:80%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.export-row button{
+    margin: 6px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    border-bottom: black 2px solid;
+
+}
+
+.export-row select{
+    margin-left: 6px;
+    padding: 6px;
+    border-radius: 6px;
+    position: relative;
+    align-items: center;
+    border-bottom: black 2px solid;
+}
+
+label{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+/* Font picker specific row */
+.font-row { justify-content: flex-start; padding: 18px 2%; margin-bottom: 24px; }
+.font-row label { font-size: 18px; margin-right: 12px; }
+.font-row #Font { min-width: 320px; font-size: 18px; }
+
+.page-grid {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;                  
+  gap: 20px;                      
+  padding: 20px;
+}
+
+.page-grid.visible {
+  display: grid;
+}
+
+.left-block {
+  border: 2px solid black;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.right-block {
+    border: 2px solid black;
+    border-radius: 20px;
+ padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.middle-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 2%;
+    flex-wrap: wrap;
+}
+
+/* Controls row holds Randomizer + Enable + Export controls horizontally */
+.controls-row {
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 2%;
+    margin-top: 24px;
+    border-bottom: black 2px solid;
+    border-top: black 2px solid;
+    position: relative;
+    background-color: rgb(105, 105, 105);
+}
+
+.controls-row > .enable-wrapper { justify-self: start; }
+
+/* Font selector dropdown (system style, but larger & left-aligned via .font-row) */
+#Font {
+    font-size: 18px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.95);
+}
+
+#Font option { padding: 8px; }
+
+/* Randomizer button */
+/* larger, centered randomizer button */
+#randomizer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    padding: 16px 44px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: rgb(122, 184, 122);
+    color: white;
+    transition: background-color 0.15s ease, transform 0.12s ease;
+    font-weight: 700;
+}
+
+#randomizer:hover { background-color: rgba(255,255,255,0.4); transform: scale(1.04); }
+
+/* Export buttons styled to match randomizer and same size */
+#export-png, #export-svg {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    padding: 16px 44px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: rgb(122, 184, 122);
+    color: white;
+    font-weight: 700;
+}
+
+#export-png:hover, #export-svg:hover { background-color: rgba(255,255,255,0.4); transform: scale(1.03); }
+
+/* Enable options checkbox and label */
+#enable-options {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0;
+}
+
+label[for="enable-options"] { font-size: 14px !important; margin-left: 8px !important; }
+
+/* wrapper for checkbox + label to align left */
+.enable-wrapper { display:flex; align-items:center; gap:8px; }
